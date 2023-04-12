@@ -18,7 +18,7 @@ use crate::simulation::SimulationSet;
 use self::terrain_assets::TerrainHandles;
 use self::terrain_manifest::{RawTerrainManifest, Terrain};
 
-pub(crate) mod commands;
+pub mod commands;
 pub(crate) mod terrain_assets;
 pub mod terrain_manifest;
 

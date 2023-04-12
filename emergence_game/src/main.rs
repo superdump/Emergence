@@ -2,18 +2,11 @@ use bevy::prelude::*;
 use bevy::window::{PresentMode, WindowMode, WindowPlugin};
 use bevy_framepace::{FramepacePlugin, FramepaceSettings, Limiter};
 use emergence_lib::simulation::generation::GenerationConfig;
+use emergence_lib::terrain::commands::ColumnInstanceMaterialPlugin;
 
 fn main() {
     App::new()
-        .add_plugins(DefaultPlugins.set(WindowPlugin {
-            primary_window: Some(Window {
-                title: "Emergence".to_string(),
-                present_mode: PresentMode::AutoNoVsync,
-                mode: WindowMode::BorderlessFullscreen,
-                ..default()
-            }),
-            ..Default::default()
-        }))
+        .add_plugin(ColumnInstanceMaterialPlugin)
         .add_plugin(FramepacePlugin)
         .insert_resource(FramepaceSettings {
             limiter: Limiter::Auto,

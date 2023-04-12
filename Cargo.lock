@@ -1693,6 +1693,7 @@ dependencies = [
  "bevy_mod_billboard",
  "bevy_mod_raycast",
  "bevy_screen_diagnostics",
+ "bytemuck",
  "criterion",
  "debug_tools",
  "derive_more",
